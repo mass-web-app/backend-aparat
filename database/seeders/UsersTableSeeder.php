@@ -25,7 +25,8 @@ class UsersTableSeeder extends Seeder
             'type'=>User::TYPE_ADMIN,
             'name'=>'مدیر اصلی',
             'email'=>'admin@gmail.com',
-            'mobile'=>'+989358891586'
+            'mobile'=>'+989358891586',
+            'password'=>bcrypt('12345678')
         ]);
         $this->command->info('CREATE ADMIN USER');
     }
@@ -36,7 +37,8 @@ class UsersTableSeeder extends Seeder
             'type'=>User::TYPE_USER,
             'name'=>'کاربر اول',
             'email'=>'user1@gmail.com',
-            'mobile'=>'+989358891581'
+            'mobile'=>'+989358891581',
+            'password'=>bcrypt('12345678')
         ]);
         $this->command->info('CREATE User 1');
     }

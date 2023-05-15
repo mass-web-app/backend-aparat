@@ -58,11 +58,11 @@ class User extends Authenticatable
 
     //endregion
 
-    //region method
+    //region methods
 
     public function findForPassport($value)
     {
-            dd($value);
+        return self::query()->where('mobile',$value)->orWhere('email',$value)->first();
     }
     //endregion
 }
